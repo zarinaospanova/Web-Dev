@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.top-left-logo {
+    padding: 30px 0 0 50px;
+}
+
+.top-left-logo img {
+    width: 50px;
+    height: 50px;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 450px;
+}
+
+#text {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.left img {
+    width: 350px;
+}
+
+.vertical-line {
+    width: 1px;
+    height: 450px;
+    background: #dbdbdb;
+    margin: 0 60px;
+}
+
+.right {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+}
+
+.right h1 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-weight: normal;
+}
+
+input {
+    margin-bottom: 10px;
+    padding: 12px;
+    border: 1px solid #dbdbdb;
+    border-radius: 8px;
+    background: #fafafa;
+}
+
+.login-btn {
+    background: #b2dffc;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+.login, #line {
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.login {
+    background: white;
+    border: 1px solid #dbdbdb;
+}
+
+#line {
+    background: white;
+    border: 1px solid #0095f6;
+    color: #0095f6;
+}
+
+.link {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.link a {
+    color: #00376b;
+    text-decoration: none;
+}
+
+.account {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.meta {
+    width: 50px;
+}
+
+.orange {
+    background: linear-gradient(to right, #f09433, #e6683c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.pink {
+    background: linear-gradient(to right, #dc2743, #cc2366, #bc1888);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.footer {
+    padding: 20px;
+    text-align: center;
+    color: #737373;
+    font-size: 12px;
+}
+
+.footer-links a {
+    color: #737373;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+@media (max-width: 900px) {
+    .container { flex-direction: column; }
+    .vertical-line { display: none; }
+    .top-left-logo { text-align: center; padding-left: 0; }
+}
