@@ -1,0 +1,40 @@
+body{
+    background-color: honeydew;
+}
+h2,h1{
+    font-family: Arial;
+    font-style: italic;
+}
+a:hover{
+    color: darkblue;
+}
+#name_{
+    color: #f4442f;
+}
+ul {
+    list-style-type: square;
+    padding-left: 40px;
+}
+ol{
+    list-style-type: upper-roman;
+    padding-left: 40px;
+}
+table {
+    border-collapse: collapse;
+    width: 70%;
+    background-color: white;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color:#d1fae5;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #d1fae5;
+}
