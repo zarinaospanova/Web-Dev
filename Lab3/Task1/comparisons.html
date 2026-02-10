@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Comparisons js </title>
+</head>
+<body>
+  <script>
+    <!--
+    true
+    false
+    true
+    true
+    false
+    false
+    false
+    -->
+  </script>
+</body>
+</html>
+
+<!--
+We know many comparison operators from maths.
+
+In JavaScript they are written like this:
+
+Greater/less than: a > b, a < b.
+Greater/less than or equals: a >= b, a <= b.
+Equals: a == b, please note the double equality sign == means the equality test, while a single one a = b means an assignment.
+Not equals: In maths the notation is ≠, but in JavaScript it’s written as a != b.
+In this article we’ll learn more about different types of comparisons, how JavaScript makes them, including important peculiarities.
+
+At the end you’ll find a good recipe to avoid “JavaScript quirks”-related issues.
+
+Boolean is the result
+
+All comparison operators return a boolean value:
+
+true – means “yes”, “correct” or “the truth”.
+false – means “no”, “wrong” or “not the truth”.
+For example:
+
+ alert( 2 > 1 );  // true (correct)
+alert( 2 == 1 ); // false (wrong)
+alert( 2 != 1 ); // true (correct)
+A comparison result can be assigned to a variable, just like any value:
+
+ let result = 5 > 4; // assign the result of the comparison
+alert( result ); // true
+String comparison
+
+To see whether a string is greater than another, JavaScript uses the so-called “dictionary” or “lexicographical” order.
+
+In other words, strings are compared letter-by-letter.
+
+For example:
+
+ alert( 'Z' > 'A' ); // true
+alert( 'Glow' > 'Glee' ); // true
+alert( 'Bee' > 'Be' ); // true
+The algorithm to compare two strings is simple:
+
+Compare the first character of both strings.
+If the first character from the first string is greater (or less) than the other string’s, then the first string is greater (or less) than the second. We’re done.
+Otherwise, if both strings’ first characters are the same, compare the second characters the same way.
+Repeat until the end of either string.
+If both strings end at the same length, then they are equal. Otherwise, the longer string is greater.
+In the first example above, the comparison 'Z' > 'A' gets to a result at the first step.
+
+The second comparison 'Glow' and 'Glee' needs more steps as strings are compared character-by-character:
+
+G is the same as G.
+l is the same as l.
+o is greater than e. Stop here. The first string is greater.
+
+Comparison of different types
+
+When comparing values of different types, JavaScript converts the values to numbers.
+
+For example:
+
+ alert( '2' > 1 ); // true, string '2' becomes a number 2
+alert( '01' == 1 ); // true, string '01' becomes a number 1
+For boolean values, true becomes 1 and false becomes 0.
+
+For example:
+
+ alert( true == 1 ); // true
+alert( false == 0 ); // true
+
+Comparison with null and undefined
+
+There’s a non-intuitive behavior when null or undefined are compared to other values.
+
+For a strict equality check ===
+These values are different, because each of them is a different type.
+
+ alert( null === undefined ); // false
+For a non-strict check ==
+There’s a special rule. These two are a “sweet couple”: they equal each other (in the sense of ==), but not any other value.
+
+ alert( null == undefined ); // true
+For maths and other comparisons < > <= >=
+null/undefined are converted to numbers: null becomes 0, while undefined becomes NaN.
+
+Now let’s see some funny things that happen when we apply these rules. And, what’s more important, how to not fall into a trap with them.
+
+Strange result: null vs 0
+
+Let’s compare null with a zero:
+
+ alert( null > 0 );  // (1) false
+alert( null == 0 ); // (2) false
+alert( null >= 0 ); // (3) true
+Mathematically, that’s strange. The last result states that “null is greater than or equal to zero”, so in one of the comparisons above it must be true, but they are both false.
+
+The reason is that an equality check == and comparisons > < >= <= work differently. Comparisons convert null to a number, treating it as 0. That’s why (3) null >= 0 is true and (1) null > 0 is false.
+
+On the other hand, the equality check == for undefined and null is defined such that, without any conversions, they equal each other and don’t equal anything else. That’s why (2) null == 0 is false.
+
+Summary
+
+Comparison operators return a boolean value.
+Strings are compared letter-by-letter in the “dictionary” order.
+When values of different types are compared, they get converted to numbers (with the exclusion of a strict equality check).
+The values null and undefined are equal == to themselves and each other, but do not equal any other value.
+Be careful when using comparisons like > or < with variables that can occasionally be null/undefined. Checking for null/undefined separately is a good idea.
+
+!-->
+

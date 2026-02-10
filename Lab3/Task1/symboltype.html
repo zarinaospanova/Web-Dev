@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Symbol type js</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<!--
+Summary
+
+Symbol is a primitive type for unique identifiers.
+
+Symbols are created with Symbol() call with an optional description (name).
+
+Symbols are always different values, even if they have the same name. If we want same-named symbols to be equal, then we should use the global registry: Symbol.for(key) returns (creates if needed) a global symbol with key as the name. Multiple calls of Symbol.for with the same key return exactly the same symbol.
+
+Symbols have two main use cases:
+
+“Hidden” object properties.
+
+If we want to add a property into an object that “belongs” to another script or a library, we can create a symbol and use it as a property key. A symbolic property does not appear in for..in, so it won’t be accidentally processed together with other properties. Also it won’t be accessed directly, because another script does not have our symbol. So the property will be protected from accidental use or overwrite.
+
+So we can “covertly” hide something into objects that we need, but others should not see, using symbolic properties.
+
+There are many system symbols used by JavaScript which are accessible as Symbol.*. We can use them to alter some built-in behaviors. For instance, later in the tutorial we’ll use Symbol.iterator for iterables, Symbol.toPrimitive to setup object-to-primitive conversion and so on.
+
+Technically, symbols are not 100% hidden. There is a built-in method Object.getOwnPropertySymbols(obj) that allows us to get all symbols. Also there is a method named Reflect.ownKeys(obj) that returns all keys of an object including symbolic ones. But most libraries, built-in functions and syntax constructs don’t use these methods.
+
+
+The object-to-primitive conversion is called automatically by many built-in functions and operators that expect a primitive as a value.
+
+There are 3 types (hints) of it:
+
+"string" (for alert and other operations that need a string)
+"number" (for maths)
+"default" (few operators, usually objects implement it the same way as "number")
+The specification describes explicitly which operator uses which hint.
+
+The conversion algorithm is:
+
+Call obj[Symbol.toPrimitive](hint) if the method exists,
+Otherwise if hint is "string"
+try calling obj.toString() or obj.valueOf(), whatever exists.
+Otherwise if hint is "number" or "default"
+try calling obj.valueOf() or obj.toString(), whatever exists.
+All these methods must return a primitive to work (if defined).
+
+In practice, it’s often enough to implement only obj.toString() as a “catch-all” method for string conversions that should return a “human-readable” representation of an object, for logging or debugging purposes.
+!-->

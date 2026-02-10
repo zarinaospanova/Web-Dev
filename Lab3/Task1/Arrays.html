@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arrays js</title>
+</head>
+<body>
+  <script>
+    let fruits = ["Apples", "Pear", "Orange"];
+
+    let shoppingCart = fruits;
+
+    shoppingCart.push("Banana");
+
+    alert( fruits.length ); // 4
+
+    let styles = ["Jazz", "Blues"];
+    styles.push("Rock-n-Roll");
+    styles[Math.floor((styles.length - 1) / 2)] = "Classics";
+    alert( styles.shift() );
+    styles.unshift("Rap", "Reggae");
+
+    let arr = ["a", "b"];
+
+    arr.push(function() {
+      alert( this );
+    })
+
+    arr[2](); // a,b,function(){...}
+
+    function sumInput() {
+
+      let numbers = [];
+
+      while (true) {
+
+        let value = prompt("A number please?", 0);
+
+        // should we cancel?
+        if (value === "" || value === null || !isFinite(value)) break;
+
+        numbers.push(+value);
+      }
+
+      let sum = 0;
+      for (let number of numbers) {
+        sum += number;
+      }
+      return sum;
+    }
+
+    alert( sumInput() );
+
+    function getMaxSubSum(arr) {
+      let maxSum = 0; // if we take no elements, zero will be returned
+
+      for (let i = 0; i < arr.length; i++) {
+        let sumFixedStart = 0;
+        for (let j = i; j < arr.length; j++) {
+          sumFixedStart += arr[j];
+          maxSum = Math.max(maxSum, sumFixedStart);
+        }
+      }
+
+      return maxSum;
+    }
+
+    alert( getMaxSubSum([-1, 2, 3, -9]) ); // 5
+    alert( getMaxSubSum([-1, 2, 3, -9, 11]) ); // 11
+    alert( getMaxSubSum([-2, -1, 1, 2]) ); // 3
+    alert( getMaxSubSum([1, 2, 3]) ); // 6
+    alert( getMaxSubSum([100, -9, 2, -3, 5]) ); // 100
+
+    function camelize(str) {
+      return str
+              .split('-') // splits 'my-long-word' into array ['my', 'long', 'word']
+              .map(
+                      // capitalizes first letters of all array items except the first one
+                      // converts ['my', 'long', 'word'] into ['my', 'Long', 'Word']
+                      (word, index) => index == 0 ? word : word[0].toUpperCase() + word.slice(1)
+              )
+              .join(''); // joins ['my', 'Long', 'Word'] into 'myLongWord'
+    }
+
+    function filterRange(arr, a, b) {
+      // added brackets around the expression for better readability
+      return arr.filter(item => (a <= item && item <= b));
+    }
+
+    let arr = [5, 3, 8, 1];
+
+    let filtered = filterRange(arr, 1, 4);
+
+    alert( filtered ); // 3,1 (matching values)
+
+    alert( arr ); // 5,3,8,1 (not modified)
+
+    let arr = [5, 2, 1, -10, 8];
+
+    arr.sort((a, b) => b - a);
+
+    alert( arr );
+
+
+  </script>
+</body>
+</html>
+
+<!--
+Summary
+
+Array is a special kind of object, suited to storing and managing ordered data items.
+
+The declaration:
+
+// square brackets (usual)
+let arr = [item1, item2...];
+
+// new Array (exceptionally rare)
+let arr = new Array(item1, item2...);
+The call to new Array(number) creates an array with the given length, but without elements.
+
+The length property is the array length or, to be precise, its last numeric index plus one. It is auto-adjusted by array methods.
+If we shorten length manually, the array is truncated.
+Getting the elements:
+
+we can get element by its index, like arr[0]
+also we can use at(i) method that allows negative indexes. For negative values of i, it steps back from the end of the array. If i >= 0, it works same as arr[i].
+We can use an array as a deque with the following operations:
+
+push(...items) adds items to the end.
+pop() removes the element from the end and returns it.
+shift() removes the element from the beginning and returns it.
+unshift(...items) adds items to the beginning.
+To loop over the elements of the array:
+
+for (let i=0; i<arr.length; i++) – works fastest, old-browser-compatible.
+for (let item of arr) – the modern syntax for items only,
+for (let i in arr) – never use.
+To compare arrays, don’t use the == operator (as well as >, < and others), as they have no special treatment for arrays. They handle them as any objects, and it’s not what we usually want.
+
+Instead you can use for..of loop to compare arrays item-by-item.
+
+We will continue with arrays and study more methods to add, remove, extract elements and sort arrays in the next chapter Array methods.
+
+Summary
+
+A cheat sheet of array methods:
+
+To add/remove elements:
+
+push(...items) – adds items to the end,
+pop() – extracts an item from the end,
+shift() – extracts an item from the beginning,
+unshift(...items) – adds items to the beginning.
+splice(pos, deleteCount, ...items) – at index pos deletes deleteCount elements and inserts items.
+slice(start, end) – creates a new array, copies elements from index start till end (not inclusive) into it.
+concat(...items) – returns a new array: copies all members of the current one and adds items to it. If any of items is an array, then its elements are taken.
+To search among elements:
+
+indexOf/lastIndexOf(item, pos) – look for item starting from position pos, and return the index or -1 if not found.
+includes(value) – returns true if the array has value, otherwise false.
+find/filter(func) – filter elements through the function, return first/all values that make it return true.
+findIndex is like find, but returns the index instead of a value.
+To iterate over elements:
+
+forEach(func) – calls func for every element, does not return anything.
+To transform the array:
+
+map(func) – creates a new array from results of calling func for every element.
+sort(func) – sorts the array in-place, then returns it.
+reverse() – reverses the array in-place, then returns it.
+split/join – convert a string to array and back.
+reduce/reduceRight(func, initial) – calculate a single value over the array by calling func for each element and passing an intermediate result between the calls.
+Additionally:
+
+Array.isArray(value) checks value for being an array, if so returns true, otherwise false.
+Please note that methods sort, reverse and splice modify the array itself.
+
+These methods are the most used ones, they cover 99% of use cases. But there are few others:
+
+arr.some(fn)/arr.every(fn) check the array.
+
+The function fn is called on each element of the array similar to map. If any/all results are true, returns true, otherwise false.
+
+These methods behave sort of like || and && operators: if fn returns a truthy value, arr.some() immediately returns true and stops iterating over the rest of items; if fn returns a falsy value, arr.every() immediately returns false and stops iterating over the rest of items as well.
+
+We can use every to compare arrays:
+
+ function arraysEqual(arr1, arr2) {
+  return arr1.length === arr2.length && arr1.every((value, index) => value === arr2[index]);
+}
+
+alert( arraysEqual([1, 2], [1, 2])); // true
+arr.fill(value, start, end) – fills the array with repeating value from index start to end.
+
+arr.copyWithin(target, start, end) – copies its elements from position start till position end into itself, at position target (overwrites existing).
+
+arr.flat(depth)/arr.flatMap(fn) create a new flat array from a multidimensional array.
+
+For the full list, see the manual.
+
+At first sight, it may seem that there are so many methods, quite difficult to remember. But actually, that’s much easier.
+
+Look through the cheat sheet just to be aware of them. Then solve the tasks of this chapter to practice, so that you have experience with array methods.
+
+Afterwards whenever you need to do something with an array, and you don’t know how – come here, look at the cheat sheet and find the right method. Examples will help you to write it correctly. Soon you’ll automatically remember the methods, without specific efforts from your side.
+
+
+!-->
