@@ -1,0 +1,35 @@
+<div class="card">
+
+  <a class="img-wrap" [href]="product.link" target="_blank">
+    <img [src]="activeImg" [alt]="product.name" />
+  </a>
+
+  <h3 class="title">
+    <a [href]="product.link" target="_blank" rel="noopener">
+      {{ product.name }}
+    </a>
+  </h3>
+
+  <p class="desc">{{ product.description }}</p>
+
+  <div class="meta">
+    <span class="price">{{ product.price | number }} ₸</span>
+    <span class="rating">
+      {{ getStars(product.rating) }} ({{ product.rating }})
+    </span>
+  </div>
+
+  <div class="thumbs">
+    @for (img of product.images; track img) {
+      <button type="button" class="thumb" (click)="setImg(img)">
+        <img [src]="img" alt="thumb" />
+      </button>
+    }
+  </div>
+
+  <div class="actions">
+    <button type="button" (click)="shareWhatsApp()">Share WhatsApp</button>
+    <button type="button" (click)="shareTelegram()">Share Telegram</button>
+  </div>
+
+</div>
