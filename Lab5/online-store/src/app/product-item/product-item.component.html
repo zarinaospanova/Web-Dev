@@ -1,0 +1,43 @@
+<div class="card">
+  <div class="img-wrap">
+    <img [src]="activeImage" [alt]="product.name" />
+
+    <button class="like" type="button" (click)="like()">
+      ❤ <span>{{ product.likes }}</span>
+    </button>
+  </div>
+
+  <div class="thumbs">
+    @for (img of product.images; track img) {
+      <button class="thumb" type="button" (click)="setImage(img)" [class.active]="img === activeImage">
+        <img [src]="img" alt="thumb"/>
+      </button>
+    }
+  </div>
+
+  <div class="body">
+    <div class="name" title="{{ product.name }}">{{ product.name }}</div>
+    <div class="desc">{{ product.description }}</div>
+
+    <div class="meta">
+      <div class="price">{{ product.price | number }} ₸</div>
+
+      <div class="rating">
+        @for (s of stars(); track s) {
+          <span class="star" [class.full]="isFull(s)" [class.half]="isHalf(s)"></span>
+        }
+        <span class="rating-number">{{ product.rating }}</span>
+      </div>
+    </div>
+
+    <a class="kaspi" [href]="product.link" target="_blank" rel="noopener">
+      Open in Kaspi →
+    </a>
+
+    <div class="actions">
+      <button class="btn" type="button" (click)="shareWhatsApp()">WhatsApp</button>
+      <button class="btn" type="button" (click)="shareTelegram()">Telegram</button>
+      <button class="btn danger" type="button" (click)="remove()">Delete</button>
+    </div>
+  </div>
+</div>

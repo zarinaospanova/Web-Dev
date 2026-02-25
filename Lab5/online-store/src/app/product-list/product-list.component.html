@@ -1,0 +1,30 @@
+<div class="toolbar">
+  <div class="search">
+    <span class="icon">⌕</span>
+    <input
+      type="text"
+      placeholder="Search products..."
+      [(ngModel)]="searchQuery"
+    />
+  </div>
+
+  <div class="count">
+    Showing <b>{{ filteredProducts.length }}</b> items
+  </div>
+</div>
+
+<div class="grid">
+  @for (p of filteredProducts; track p.id) {
+    <app-product-item
+      [product]="p"
+      (delete)="deleteProduct($event)">
+    </app-product-item>
+  }
+</div>
+
+@if (filteredProducts.length === 0) {
+  <div class="empty">
+    <div class="empty-title">No products found</div>
+    <div class="empty-sub">Try another keyword.</div>
+  </div>
+}

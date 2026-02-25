@@ -1,0 +1,37 @@
+<div class="page">
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">OS</div>
+      <div>
+        <div class="title">Online Store</div>
+        <div class="subtitle"> with Kaspi </div>
+      </div>
+    </div>
+
+    <div class="hint">
+      <span>Tip:</span> search by name (iphone, sony, ps5...)
+    </div>
+  </header>
+
+  <section class="filters">
+    <button class="chip" [class.active]="selectedCategoryId === null" (click)="selectCategory(null)">
+      All Products
+    </button>
+
+    @for (c of categories; track c.id) {
+      <button class="chip" [class.active]="selectedCategoryId === c.id" (click)="selectCategory(c.id)">
+        {{ c.name }}
+      </button>
+    }
+  </section>
+
+  <section class="content">
+    <app-product-list [products]="selectedProducts"></app-product-list>
+  </section>
+
+  <footer class="footer">
+    <span>© {{ year }} Online Store</span>
+    <span class="dot">•</span>
+    <span class="muted">Made in Angular</span>
+  </footer>
+</div>

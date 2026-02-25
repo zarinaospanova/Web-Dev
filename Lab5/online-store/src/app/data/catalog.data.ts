@@ -1,0 +1,286 @@
+import { Product } from '../models/product.model';
+
+export const CATEGORIES = [
+  { id: 1, name: 'Smartphones' },
+  { id: 2, name: 'Audio' },
+  { id: 3, name: 'Gaming' },
+  { id: 4, name: 'Tech & Gadgets' }
+];
+
+export const PRODUCTS: Product[] = [
+  // Smartphones (5)
+  {
+    id: 1, categoryId: 1, likes: 0,
+    name: 'Apple iPhone 15 128GB (черный)',
+    description: 'Dynamic Island, мощный чип, отличная камера.',
+    price: 399990, rating: 4.8,
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmaND5Nou_GQHZxlRjT2LdjJAQCRK-3PiaNw&s',
+    images: [
+      'https://applestore72.ru/upload/iblock/c0a/to5to0p0hr3vj5frlo80bq2zqq24i84n.jpg',
+      'https://itechh.kz/image/cache/catalog/15iPhone/30069420bb1.jpg-600x600.png',
+      'https://resources.cdn-kaspi.kz/img/m/p/hbf/h6b/86275143598110.jpg?format=gallery-large',
+      'https://object.pscloud.io/cms/cms/Photo/img_0_77_5087_0_6_m9E4qu.webp',
+    ],
+    link: 'https://kaspi.kz/shop/p/apple-iphone-15-128gb-chernyi-113137790/'
+  },
+  {
+    id: 2, categoryId: 1, likes: 0,
+    name: 'Xiaomi Redmi Note 13 Pro 4G NFC 8/256 (зеленый)',
+    description: 'Большой экран, хорошая камера, быстрая зарядка.',
+    price: 139990, rating: 4.7,
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQp1EF-_wDL4Zxcwgzb2U0X3a0FUYNIzVaCyQ&s',
+    images: [
+      'https://object.pscloud.io/cms/cms/Photo/img_0_77_5753_0_1_TTNCgq.webp',
+      'https://api.2droida.ru/storage/products/633d58c56076b898a8adc50fa92aa7e2/3079/50fac872371b87a2cb489bc850c9c64a.jpg',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8c4jlXX5pFiA8gLU73ZP5i97oeMWiTdR46Q&s',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUkPV4ZOdxu6U7MqXFXCMS0e27KqbuY6Tjqw&s',
+    ],
+    link: 'https://kaspi.kz/shop/p/xiaomi-redmi-note-13-pro-4g-nfc-8-gb-256-gb-zelenyi-115966726/'
+  },
+  {
+    id: 3, categoryId: 1, likes: 0,
+    name: 'Samsung Galaxy S24',
+    description: 'Флагман, производительность, качественный экран.',
+    price: 429990, rating: 4.6,
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzFlMr8YaxWg9h5C8fUmYy2c--J2FuKvxT3g&s',
+    images: [
+      'https://i0.wp.com/celularespanama.net/wp-content/uploads/2024/01/S24-Ultra.jpg?fit=1000%2C1000&ssl=1',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRe3IThx0baRhsv5KBPiTdbzevb4lHhqPTjpg&s',
+      'https://images.samsung.com/kz_ru/smartphones/galaxy-s24-ultra/images/galaxy-s24-ultra-highlights-color-titanium-gray-back-mo.jpg?imbypass=true',
+      'https://object.pscloud.io/cms/cms/Photo/img_0_77_5797_0_1_XaGAW4.webp',
+    ],
+    link: 'https://kaspi.kz/shop/p/samsung-galaxy-s24-5g-8-gb-256-gb-chernyi-podarok-116004286/?srsltid=AfmBOoqqyANxyqOrKd3pnvep5HBvlnuZJ0A9s01OoqC-hWg_ZmsskxY1'
+  },
+  {
+    id: 4, categoryId: 1, likes: 0,
+    name: 'Google Pixel 8',
+    description: 'Чистый Android, лучшая обработка фото.',
+    price: 379990, rating: 4.5,
+    image: 'https://resources.cdn-kaspi.kz/img/m/p/hcf/he9/84136091254814.jpg?format=gallery-medium',
+    images: [
+      'https://resources.cdn-kaspi.kz/img/m/p/pe4/p89/64507271.png?format=gallery-medium',
+      'https://resources.cdn-kaspi.kz/img/m/p/p39/p8a/64507274.png?format=gallery-medium',
+      'https://resources.cdn-kaspi.kz/img/m/p/p00/p8a/64507272.png?format=gallery-medium',
+      'https://resources.cdn-kaspi.kz/img/m/p/p55/p8a/64507275.png?format=gallery-medium',
+    ],
+    link: 'https://kaspi.kz/shop/p/google-pixel-8-8-gb-128-gb-chernyi-113692654/?srsltid=AfmBOopXFvVFvqtSrGvK475Yo-3VCOk5cfYRajYso_beaOBMDhZaE7eP'
+  },
+  {
+    id: 5, categoryId: 1, likes: 0,
+    name: 'Realme 12 Pro',
+    description: 'Стильный дизайн, хороший баланс цены.',
+    price: 159990, rating: 4.4,
+    image: 'https://resources.cdn-kaspi.kz/img/m/p/hf6/h6a/85754883833886.png?format=gallery-medium',
+    images: [
+      'https://resources.cdn-kaspi.kz/img/m/p/hce/he0/85754885242910.jpg?format=gallery-medium',
+      'https://resources.cdn-kaspi.kz/img/m/p/he9/hc1/85754885308446.jpg?format=gallery-medium',
+      'https://resources.cdn-kaspi.kz/img/m/p/h31/h30/85754885439518.jpg?format=gallery-medium',
+      'https://resources.cdn-kaspi.kz/img/m/p/hf4/hfb/85754885505054.jpg?format=gallery-medium',
+    ],
+    link: 'https://kaspi.kz/shop/p/realme-12-pro-12-gb-512-gb-sinii-117065757/?srsltid=AfmBOopelXGbHNxMBvAuP-jxH_HVfX25a14D-drjfHx2RZb7-hJbyjlU'
+  },
+
+  // Audio (5)
+  {
+    id: 6, categoryId: 2, likes: 0,
+    name: 'Apple AirPods Pro 2nd generation',
+    description: 'Активное шумоподавление, отличный звук.',
+    price: 109990, rating: 4.9,
+    image: 'https://resources.cdn-kaspi.kz/img/m/p/ha3/h07/84108189630494.jpg?format=gallery-medium',
+    images: [
+      'https://resources.cdn-kaspi.kz/img/m/p/h03/h0e/84108189696030.jpg?format=gallery-medium',
+      'https://resources.cdn-kaspi.kz/img/m/p/h14/h8a/84108189761566.jpg?format=gallery-medium',
+      'https://resources.cdn-kaspi.kz/img/m/p/hf4/hf2/84108189827102.jpg?format=gallery-medium',
+      'https://resources.cdn-kaspi.kz/img/m/p/h34/he4/84108189892638.jpg?format=gallery-medium',
+    ],
+    link: 'https://kaspi.kz/shop/p/naushniki-apple-airpods-pro-2nd-generation-with-wireless-magsafe-charging-case-belyi-113677582/?c=391010000&utm_source=google&utm_medium=cpc&utm_campaign=shop_google_search_tv_audio_headphones_apple_desktop&gbraid=0AAAAAC7-v7jXArrxzxFGhDwOwHbps-6N0&gclid=CjwKCAiA2PrMBhA4EiwAwpHyC5pwWHDY3rzKY1MbiFGMH-DQUJ8wnOdh8F-Cb0NA5uyo_YHjvLehVxoCthAQAvD_BwE'
+  },
+  {
+    id: 7, categoryId: 2, likes: 0,
+    name: 'Sony WH-1000XM5 (черный)',
+    description: 'Топовое шумоподавление, комфорт и звук.',
+    price: 189990, rating: 4.9,
+    image: 'https://resources.cdn-kaspi.kz/img/m/p/h9c/h23/65099684020254.jpg?format=gallery-medium',
+    images: [
+      'https://resources.cdn-kaspi.kz/img/m/p/hc7/hde/65099687657502.jpg?format=gallery-medium',
+      'https://resources.cdn-kaspi.kz/img/m/p/hd5/hd0/65099686150174.jpg?format=gallery-medium',
+      'https://resources.cdn-kaspi.kz/img/m/p/h0d/h4e/65099689000990.jpg?format=gallery-medium',
+      'https://resources.cdn-kaspi.kz/img/m/p/hc7/hde/65099687657502.jpg?format=gallery-medium',
+    ],
+    link: 'https://kaspi.kz/shop/p/naushniki-sony-wh-1000xm5-chernyi-105259822/?srsltid=AfmBOopTaWBt0y-WccejJpGIqjHEq2F_GCSuh0XlBxPFx_Y0xr0nvdjv'
+  },
+  {
+    id: 8, categoryId: 2, likes: 0,
+    name: 'JBL Tune 760NC',
+    description: 'Бас, удобство, шумоподавление.',
+    price: 39990, rating: 4.5,
+    image: 'https://resources.cdn-kaspi.kz/img/m/p/hf3/h7c/64217926172702.jpg?format=gallery-medium',
+    images: [
+      'https://resources.cdn-kaspi.kz/img/m/p/h7e/h2f/64217929121822.jpg?format=gallery-medium',
+      'https://resources.cdn-kaspi.kz/img/m/p/ha6/hc1/64217932070942.jpg?format=gallery-medium',
+      'https://images.unsplash.com/photo-1580894908361-967195033215?auto=format&fit=crop&w=900&q=60',
+      'https://resources.cdn-kaspi.kz/img/m/p/ha6/hc1/64217932070942.jpg?format=gallery-medium',
+    ],
+    link: 'https://kaspi.kz/shop/p/naushniki-jbl-tune-760nc-chernyi-102863031/?srsltid=AfmBOorg-L-rK0PRLfX8FepBOmEqECC04vqYp4vyw0cL9BdwP531junk'
+  },
+  {
+    id: 9, categoryId: 2, likes: 0,
+    name: 'Samsung Galaxy Buds 2',
+    description: 'Компактные наушники, удобно в дороге.',
+    price: 59990, rating: 4.4,
+    image: 'https://resources.cdn-kaspi.kz/img/m/p/hfc/h07/64155512635422.jpg?format=gallery-medium',
+    images: [
+      'https://resources.cdn-kaspi.kz/img/m/p/hd4/h8d/64155515027486.jpg?format=gallery-medium',
+      'https://resources.cdn-kaspi.kz/img/m/p/h84/h4e/64155517255710.jpg?format=gallery-medium',
+      'https://resources.cdn-kaspi.kz/img/m/p/h9f/h57/64155519025182.jpg?format=gallery-medium',
+      'https://resources.cdn-kaspi.kz/img/m/p/h72/h0c/64155521777694.jpg?format=gallery-medium',
+    ],
+    link: 'https://kaspi.kz/shop/p/naushniki-samsung-galaxy-buds-2-chernyi-102046373/?srsltid=AfmBOop-_F9SPXwJ-icG4gune25xAQ5Z_rwid9QNCd-TxYOc_T5LhZMv'
+  },
+  {
+    id: 10, categoryId: 2, likes: 0,
+    name: 'HyperX Cloud II',
+    description: 'Игровая гарнитура, микрофон и комфорт.',
+    price: 49990, rating: 4.6,
+    image: 'https://resources.cdn-kaspi.kz/img/m/p/h72/he2/63770832764958.jpg?format=gallery-medium',
+    images: [
+      'https://resources.cdn-kaspi.kz/img/m/p/h33/hb1/63770833649694.jpg?format=gallery-medium',
+      'https://resources.cdn-kaspi.kz/img/m/p/h5a/h48/63770834305054.jpg?format=gallery-medium',
+      'https://resources.cdn-kaspi.kz/img/m/p/hf4/h56/63770834960414.jpg?format=gallery-medium',
+      'https://resources.cdn-kaspi.kz/img/m/p/h33/hb1/63770833649694.jpg?format=gallery-medium',
+    ],
+    link: 'https://kaspi.kz/shop/p/naushniki-hyperx-cloud-ii-cherno-krasnyi-4800107/?srsltid=AfmBOoqnNnfOTN8OznFS1uRvYUVhdfyh4EwndMhtAJliEySs2UKRr57x'
+  },
+
+  // Gaming (5)
+  {
+    id: 11, categoryId: 3, likes: 0,
+    name: 'Sony PlayStation 5 Slim',
+    description: 'Быстрая загрузка игр и отличная графика.',
+    price: 279990, rating: 4.9,
+    image: 'https://resources.cdn-kaspi.kz/img/m/p/hf1/h03/84526695677982.jpg?format=gallery-medium',
+    images: [
+      'https://resources.cdn-kaspi.kz/img/m/p/pef/p29/78474502.png?format=gallery-medium',
+      'https://resources.cdn-kaspi.kz/img/m/p/p0b/p2a/78474503.png?format=gallery-medium',
+      'https://resources.cdn-kaspi.kz/img/m/p/p27/p2a/78474504.png?format=gallery-medium',
+      'https://resources.cdn-kaspi.kz/img/m/p/p43/p2a/78474505.png?format=gallery-medium',
+    ],
+    link: 'https://kaspi.kz/shop/p/sony-playstation-5-slim-114696098/?srsltid=AfmBOop3KTqJTH3gcJSnSejCYx8HLHQEkKdujcJvlVusGswMhK8S9J92'
+  },
+  {
+    id: 12, categoryId: 3, likes: 0,
+    name: 'Nintendo Switch OLED (белый)',
+    description: 'Гибридная консоль: дома и в дороге.',
+    price: 159990, rating: 4.8,
+    image: 'https://resources.cdn-kaspi.kz/img/m/p/h9d/hf6/80832440533022.png?format=gallery-medium',
+    images: [
+      'https://resources.cdn-kaspi.kz/img/m/p/h82/h14/80832440598558.png?format=gallery-medium',
+      'https://resources.cdn-kaspi.kz/img/m/p/h56/hbf/80832440664094.png?format=gallery-medium',
+      'https://api.technodom.kz/f3/api/v1/images/800/800/igrovaya_konsol_nintendo_switch_oled_white_45496453435_267280_1.jpg',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8LjVIBvTeuNg1uXU-5xH0TeLFOBAziiWpVA&s',
+    ],
+    link: 'https://kaspi.kz/shop/p/nintendo-switch-oled-belyi-the-legend-of-zelda-breath-of-the-wild-110424017/?srsltid=AfmBOop5Xbf8LesxjIxCR6igN7M-7cAe30GVdBdxav-_ymWXMZ20wGfw'
+  },
+  { id: 13, categoryId: 3, likes: 0, name: 'Xbox Series X', description: 'Мощная консоль для 4K гейминга.', price: 249990, rating: 4.7,
+    image: 'https://resources.cdn-kaspi.kz/img/m/p/h26/ha1/63982141407262.jpg?format=gallery-medium',
+    images: [
+      'https://resources.cdn-kaspi.kz/img/m/p/hc8/h77/63982144585758.jpg?format=gallery-medium',
+      'https://resources.cdn-kaspi.kz/img/m/p/h02/h0e/63982148255774.jpg?format=gallery-medium',
+      'https://resources.cdn-kaspi.kz/img/m/p/h35/hce/63982150615070.jpg?format=gallery-medium',
+      'https://resources.cdn-kaspi.kz/img/m/p/hb9/h6a/63982152122398.jpg?format=gallery-medium',
+    ],
+    link: 'https://kaspi.kz/shop/p/xbox-series-x-1tb-chernyi-100824897/?srsltid=AfmBOooMfakpKP03aXnGuYNKtsuc9XaY9urktBWfygVXL8fMNi4aTYEr'
+  },
+  { id: 14, categoryId: 3, likes: 0, name: 'Gaming Mouse', description: 'Точная мышь для игр.', price: 24990, rating: 4.5,
+    image: 'https://resources.cdn-kaspi.kz/img/m/p/p85/p8f/26937472.jpg?format=gallery-medium',
+    images: [
+      'https://resources.cdn-kaspi.kz/img/m/p/pa1/p8f/26937473.jpg?format=gallery-medium',
+      'https://resources.cdn-kaspi.kz/img/m/p/pd9/p8f/26937475.jpg?format=gallery-medium',
+      'https://resources.cdn-kaspi.kz/img/m/p/pf5/p8f/26937476.jpg?format=gallery-medium',
+      'https://resources.cdn-kaspi.kz/img/m/p/p85/p8f/26937472.jpg?format=gallery-medium',
+    ],
+    link: 'https://kaspi.kz/shop/p/ajazz-aj159-nl-belyi-135324500/?c=391010000&utm_source=google&utm_medium=cpc&utm_campaign=shop_google_search_computer_cmp_peripherals_desktop&gbraid=0AAAAAC7-v7hD_EiMXsz7Dsb3NQU0B47g3&gclid=CjwKCAiA2PrMBhA4EiwAwpHyC0cOy585ZhM_-AD9OclWrkdIxxR9ryKmS-zvKvOqi_oJku0_JzD4axoCHJoQAvD_BwE'
+  },
+  { id: 15, categoryId: 3, likes: 0, name: 'Mechanical Keyboard', description: 'Клавиатура с приятным кликом.', price: 39990, rating: 4.4,
+    image: 'https://resources.cdn-kaspi.kz/img/m/p/p17/pb4/79746578.jpg?format=gallery-medium',
+    images: [
+      'https://resources.cdn-kaspi.kz/img/m/p/p8f/pb1/79746580.jpg?format=gallery-medium',
+      'https://resources.cdn-kaspi.kz/img/m/p/p25/pae/79746590.jpg?format=gallery-medium',
+      'https://resources.cdn-kaspi.kz/img/m/p/p09/pae/79746591.jpg?format=gallery-medium',
+      'https://resources.cdn-kaspi.kz/img/m/p/ped/pad/79746592.jpg?format=gallery-medium',
+    ],
+    link: 'https://kaspi.kz/shop/p/ultra-s-ultkb01-combo8-chernyi-150057534/?c=391010000&utm_source=google&utm_medium=cpc&utm_campaign=shop_google_search_computer_cmp_peripherals_desktop&gbraid=0AAAAAC7-v7hD_EiMXsz7Dsb3NQU0B47g3&gclid=CjwKCAiA2PrMBhA4EiwAwpHyC9WD2vk7V2BvCl0OLsTeIwGQZrdliCdYK-x49mmIOPBY7hrltFwc6hoC2csQAvD_BwE'
+  },
+
+  // Tech & Gadgets (5)
+  {
+    id: 16, categoryId: 4, likes: 0,
+    name: 'Apple MacBook Air 15 2023 8/256',
+    description: 'Идеален для учебы, работы и разработки.',
+    price: 699990, rating: 4.8,
+    image: 'https://resources.cdn-kaspi.kz/img/m/p/hd4/h65/81547557503006.jpg?format=gallery-medium',
+    images: [
+      'https://resources.cdn-kaspi.kz/img/m/p/hf6/h79/81547557568542.jpg?format=gallery-medium',
+      'https://resources.cdn-kaspi.kz/img/m/p/he0/haf/81547557634078.jpg?format=gallery-medium',
+      'https://resources.cdn-kaspi.kz/img/m/p/hc1/h17/81547557699614.jpg?format=gallery-medium',
+      'https://resources.cdn-kaspi.kz/img/m/p/hf6/h79/81547557568542.jpg?format=gallery-medium',
+    ],
+    link: 'https://kaspi.kz/shop/p/apple-macbook-air-15-2023-15-3-8-gb-ssd-256-gb-macos-mqkp3ru-a-111217765/?srsltid=AfmBOoq7S9YByIw-hmxnUP1DF4u0EpRD3m-akMpgSzLVYuPXZxupwozq&utm_source=google&utm_medium=cpc&utm_campaign=shop_google_search_computer_cmp_peripherals_desktop&gbraid=0AAAAAC7-v7hD_EiMXsz7Dsb3NQU0B47g3&gclid=CjwKCAiA2PrMBhA4EiwAwpHyC9WD2vk7V2BvCl0OLsTeIwGQZrdliCdYK-x49mmIOPBY7hrltFwc6hoC2csQAvD_BwE'
+  },
+  {
+    id: 17, categoryId: 4, likes: 0,
+    name: 'Apple iPad 10th gen 2024 10.9" 4/64',
+    description: 'Планшет для учебы, заметок и контента.',
+    price: 209990, rating: 4.7,
+    image: 'https://resources.cdn-kaspi.kz/img/m/p/p7e/pa1/18566184.png?format=gallery-medium',
+    images: [
+      'https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?auto=format&fit=crop&w=900&q=60',
+      'https://resources.cdn-kaspi.kz/img/m/p/p9a/pa1/18566185.png?format=gallery-medium',
+      'https://resources.cdn-kaspi.kz/img/m/p/pd2/pa1/18566187.png?format=gallery-medium',
+      'https://resources.cdn-kaspi.kz/img/m/p/pef/pa1/18566188.png?format=gallery-medium',
+    ],
+    link: 'https://kaspi.kz/shop/p/apple-ipad-10th-gen-2024-10-9-djuim-4-gb-64-gb-sinii-132992660/?srsltid=AfmBOoojS6UIzopp3RcRNz83vw8Hl6ZDLkKnHRnZCVfxKbETiyvkXWhx&utm_source=google&utm_medium=cpc&utm_campaign=shop_google_search_computer_cmp_peripherals_desktop&gbraid=0AAAAAC7-v7hD_EiMXsz7Dsb3NQU0B47g3&gclid=CjwKCAiA2PrMBhA4EiwAwpHyC9WD2vk7V2BvCl0OLsTeIwGQZrdliCdYK-x49mmIOPBY7hrltFwc6hoC2csQAvD_BwE'
+  },
+  {
+    id: 18, categoryId: 4, likes: 0,
+    name: 'Dyson V15 Detect Absolute',
+    description: 'Мощный беспроводной пылесос с лазером.',
+    price: 399990, rating: 4.9,
+    image: 'https://resources.cdn-kaspi.kz/img/m/p/h96/h72/85625410420766.jpg?format=gallery-medium',
+    images: [
+      'https://resources.cdn-kaspi.kz/img/m/p/h96/h82/85625410453534.jpg?format=gallery-medium',
+      'https://resources.cdn-kaspi.kz/img/m/p/hb2/hfb/85625410551838.jpg?format=gallery-medium',
+      'https://resources.cdn-kaspi.kz/img/m/p/h09/h20/81397947367454.jpg?format=gallery-medium',
+      'https://resources.cdn-kaspi.kz/img/m/p/h96/h82/85625410453534.jpg?format=gallery-medium',
+    ],
+    link: 'https://kaspi.kz/shop/p/dyson-v15-detect-absolute-serebristyi-110975356/?srsltid=AfmBOormbgQe5DZ2IPuVE-HT3zW6ZQl9kXGsZL2M1SQvIGT1DC7hs-sx&utm_source=google&utm_medium=cpc&utm_campaign=shop_google_search_computer_cmp_peripherals_desktop&gbraid=0AAAAAC7-v7hD_EiMXsz7Dsb3NQU0B47g3&gclid=CjwKCAiA2PrMBhA4EiwAwpHyC9WD2vk7V2BvCl0OLsTeIwGQZrdliCdYK-x49mmIOPBY7hrltFwc6hoC2csQAvD_BwE'
+  },
+  {
+    id: 19, categoryId: 4, likes: 0,
+    name: 'Xiaomi Smart Band 8 Global (черный)',
+    description: 'Фитнес-браслет, мониторинг активности и сна.',
+    price: 19990, rating: 4.6,
+    image: 'https://resources.cdn-kaspi.kz/img/m/p/h05/h87/83701583446046.jpg?format=gallery-medium',
+    images: [
+      'https://resources.cdn-kaspi.kz/img/m/p/h14/h8a/83701585608734.jpg?format=gallery-medium',
+      'https://resources.cdn-kaspi.kz/img/m/p/hf2/h47/83701585805342.jpg?format=gallery-medium',
+      'https://resources.cdn-kaspi.kz/img/m/p/he8/h93/83701586001950.jpg?format=gallery-medium',
+      'https://resources.cdn-kaspi.kz/img/m/p/he8/h93/83701586001950.jpg?format=gallery-medium',
+    ],
+    link: 'https://kaspi.kz/shop/p/xiaomi-smart-band-8-global-version-chernyi-113260965/?srsltid=AfmBOop7VJggs7oSPqF4R1EWMZorsgvAMLhpEp0OoNdKFiOwgO8xjq1e&utm_source=google&utm_medium=cpc&utm_campaign=shop_google_search_computer_cmp_peripherals_desktop&gbraid=0AAAAAC7-v7hD_EiMXsz7Dsb3NQU0B47g3&gclid=CjwKCAiA2PrMBhA4EiwAwpHyC9WD2vk7V2BvCl0OLsTeIwGQZrdliCdYK-x49mmIOPBY7hrltFwc6hoC2csQAvD_BwE'
+  },
+  {
+    id: 20, categoryId: 4, likes: 0,
+    name: 'Smart Watch',
+    description: 'Смарт-часы для спорта и уведомлений.',
+    price: 99990, rating: 4.3,
+    image: 'https://resources.cdn-kaspi.kz/img/m/p/h49/h9a/84355202383902.jpg?format=gallery-medium',
+    images: [
+      'https://resources.cdn-kaspi.kz/img/m/p/ha0/h23/84353783431198.jpg?format=gallery-medium',
+      'https://resources.cdn-kaspi.kz/img/m/p/had/h80/84353783463966.jpg?format=gallery-medium',
+      'https://resources.cdn-kaspi.kz/img/m/p/h6b/hdc/84355202580510.jpg?format=gallery-medium',
+      'https://resources.cdn-kaspi.kz/img/m/p/h7f/h74/84353783496734.jpg?format=gallery-medium',
+    ],
+    link: 'https://kaspi.kz/shop/p/yunteko-gi20-47-mm-rozovyi-rozovyi-114087319/?c=391010000&utm_source=google&utm_medium=cpc&utm_campaign=shop_google_search_computer_cmp_peripherals_desktop&gbraid=0AAAAAC7-v7hD_EiMXsz7Dsb3NQU0B47g3&gclid=CjwKCAiA2PrMBhA4EiwAwpHyC9WD2vk7V2BvCl0OLsTeIwGQZrdliCdYK-x49mmIOPBY7hrltFwc6hoC2csQAvD_BwE'
+  },
+];
