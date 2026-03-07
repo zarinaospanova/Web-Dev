@@ -1,14 +1,17 @@
 export interface Product {
   id: number;
   categoryId: number;
+
   name: string;
   description: string;
   price: number;
-  rating: number;      // can be 4.5 etc
+  rating: number;
 
-  image: string;       // main image
-  images: string[];    // 4 images
+  image: string;
+  images: string[];
 
-  link: string;        // kaspi link
-  likes: number;       // starts at 0
+  link: string;
+  likes: number;
+
+  isFavorite: boolean; //  NEW
 }

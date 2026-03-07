@@ -35,6 +35,10 @@
     </a>
 
     <div class="actions">
+      <button class="btn" type="button" (click)="onToggleFavorite()">
+        {{ product.isFavorite ? '⭐ In Favorites' : '⭐ Add to Favorites' }}
+      </button>
+
       <button class="btn" type="button" (click)="shareWhatsApp()">WhatsApp</button>
       <button class="btn" type="button" (click)="shareTelegram()">Telegram</button>
       <button class="btn danger" type="button" (click)="remove()">Delete</button>

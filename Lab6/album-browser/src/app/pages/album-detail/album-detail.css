@@ -1,0 +1,59 @@
+.detail-card {
+  background: #f8fafc;
+  padding: 24px;
+  border-radius: 16px;
+  max-width: 700px;
+}
+
+.detail-card input {
+  width: 100%;
+  margin-top: 8px;
+  margin-bottom: 18px;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.actions button,
+.actions a {
+  border: none;
+  background: #2563eb;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.actions .secondary {
+  background: #64748b;
+}
+
+.info-box,
+.error-box {
+  padding: 14px;
+  border-radius: 10px;
+  margin: 16px 0;
+}
+
+.info-box {
+  background: #eff6ff;
+}
+
+.error-box {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.success-message {
+  margin-top: 16px;
+  color: #15803d;
+  font-weight: 600;
+}

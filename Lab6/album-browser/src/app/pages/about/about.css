@@ -1,0 +1,10 @@
+.about-card {
+  background: #f8fafc;
+  padding: 28px;
+  border-radius: 16px;
+  line-height: 1.7;
+}
+
+.about-card h2 {
+  margin-top: 0;
+}

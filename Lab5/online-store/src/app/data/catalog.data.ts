@@ -21,7 +21,8 @@ export const PRODUCTS: Product[] = [
       'https://resources.cdn-kaspi.kz/img/m/p/hbf/h6b/86275143598110.jpg?format=gallery-large',
       'https://object.pscloud.io/cms/cms/Photo/img_0_77_5087_0_6_m9E4qu.webp',
     ],
-    link: 'https://kaspi.kz/shop/p/apple-iphone-15-128gb-chernyi-113137790/'
+    link: 'https://kaspi.kz/shop/p/apple-iphone-15-128gb-chernyi-113137790/',
+    isFavorite: false, // ✅
   },
   {
     id: 2, categoryId: 1, likes: 0,
@@ -35,7 +36,8 @@ export const PRODUCTS: Product[] = [
       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8c4jlXX5pFiA8gLU73ZP5i97oeMWiTdR46Q&s',
       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUkPV4ZOdxu6U7MqXFXCMS0e27KqbuY6Tjqw&s',
     ],
-    link: 'https://kaspi.kz/shop/p/xiaomi-redmi-note-13-pro-4g-nfc-8-gb-256-gb-zelenyi-115966726/'
+    link: 'https://kaspi.kz/shop/p/xiaomi-redmi-note-13-pro-4g-nfc-8-gb-256-gb-zelenyi-115966726/',
+    isFavorite: false,
   },
   {
     id: 3, categoryId: 1, likes: 0,
@@ -49,7 +51,8 @@ export const PRODUCTS: Product[] = [
       'https://images.samsung.com/kz_ru/smartphones/galaxy-s24-ultra/images/galaxy-s24-ultra-highlights-color-titanium-gray-back-mo.jpg?imbypass=true',
       'https://object.pscloud.io/cms/cms/Photo/img_0_77_5797_0_1_XaGAW4.webp',
     ],
-    link: 'https://kaspi.kz/shop/p/samsung-galaxy-s24-5g-8-gb-256-gb-chernyi-podarok-116004286/?srsltid=AfmBOoqqyANxyqOrKd3pnvep5HBvlnuZJ0A9s01OoqC-hWg_ZmsskxY1'
+    link: 'https://kaspi.kz/shop/p/samsung-galaxy-s24-5g-8-gb-256-gb-chernyi-podarok-116004286/?srsltid=AfmBOoqqyANxyqOrKd3pnvep5HBvlnuZJ0A9s01OoqC-hWg_ZmsskxY1',
+    isFavorite: false,
   },
   {
     id: 4, categoryId: 1, likes: 0,
@@ -63,7 +66,8 @@ export const PRODUCTS: Product[] = [
       'https://resources.cdn-kaspi.kz/img/m/p/p00/p8a/64507272.png?format=gallery-medium',
       'https://resources.cdn-kaspi.kz/img/m/p/p55/p8a/64507275.png?format=gallery-medium',
     ],
-    link: 'https://kaspi.kz/shop/p/google-pixel-8-8-gb-128-gb-chernyi-113692654/?srsltid=AfmBOopXFvVFvqtSrGvK475Yo-3VCOk5cfYRajYso_beaOBMDhZaE7eP'
+    link: 'https://kaspi.kz/shop/p/google-pixel-8-8-gb-128-gb-chernyi-113692654/?srsltid=AfmBOopXFvVFvqtSrGvK475Yo-3VCOk5cfYRajYso_beaOBMDhZaE7eP',
+    isFavorite: false,
   },
   {
     id: 5, categoryId: 1, likes: 0,
@@ -77,7 +81,8 @@ export const PRODUCTS: Product[] = [
       'https://resources.cdn-kaspi.kz/img/m/p/h31/h30/85754885439518.jpg?format=gallery-medium',
       'https://resources.cdn-kaspi.kz/img/m/p/hf4/hfb/85754885505054.jpg?format=gallery-medium',
     ],
-    link: 'https://kaspi.kz/shop/p/realme-12-pro-12-gb-512-gb-sinii-117065757/?srsltid=AfmBOopelXGbHNxMBvAuP-jxH_HVfX25a14D-drjfHx2RZb7-hJbyjlU'
+    link: 'https://kaspi.kz/shop/p/realme-12-pro-12-gb-512-gb-sinii-117065757/?srsltid=AfmBOopelXGbHNxMBvAuP-jxH_HVfX25a14D-drjfHx2RZb7-hJbyjlU',
+    isFavorite: false,
   },
 
   // Audio (5)
@@ -93,7 +98,8 @@ export const PRODUCTS: Product[] = [
       'https://resources.cdn-kaspi.kz/img/m/p/hf4/hf2/84108189827102.jpg?format=gallery-medium',
       'https://resources.cdn-kaspi.kz/img/m/p/h34/he4/84108189892638.jpg?format=gallery-medium',
     ],
-    link: 'https://kaspi.kz/shop/p/naushniki-apple-airpods-pro-2nd-generation-with-wireless-magsafe-charging-case-belyi-113677582/?c=391010000&utm_source=google&utm_medium=cpc&utm_campaign=shop_google_search_tv_audio_headphones_apple_desktop&gbraid=0AAAAAC7-v7jXArrxzxFGhDwOwHbps-6N0&gclid=CjwKCAiA2PrMBhA4EiwAwpHyC5pwWHDY3rzKY1MbiFGMH-DQUJ8wnOdh8F-Cb0NA5uyo_YHjvLehVxoCthAQAvD_BwE'
+    link: 'https://kaspi.kz/shop/p/naushniki-apple-airpods-pro-2nd-generation-with-wireless-magsafe-charging-case-belyi-113677582/',
+    isFavorite: false,
   },
   {
     id: 7, categoryId: 2, likes: 0,
@@ -107,7 +113,8 @@ export const PRODUCTS: Product[] = [
       'https://resources.cdn-kaspi.kz/img/m/p/h0d/h4e/65099689000990.jpg?format=gallery-medium',
       'https://resources.cdn-kaspi.kz/img/m/p/hc7/hde/65099687657502.jpg?format=gallery-medium',
     ],
-    link: 'https://kaspi.kz/shop/p/naushniki-sony-wh-1000xm5-chernyi-105259822/?srsltid=AfmBOopTaWBt0y-WccejJpGIqjHEq2F_GCSuh0XlBxPFx_Y0xr0nvdjv'
+    link: 'https://kaspi.kz/shop/p/naushniki-sony-wh-1000xm5-chernyi-105259822/',
+    isFavorite: false,
   },
   {
     id: 8, categoryId: 2, likes: 0,
@@ -121,7 +128,8 @@ export const PRODUCTS: Product[] = [
       'https://images.unsplash.com/photo-1580894908361-967195033215?auto=format&fit=crop&w=900&q=60',
       'https://resources.cdn-kaspi.kz/img/m/p/ha6/hc1/64217932070942.jpg?format=gallery-medium',
     ],
-    link: 'https://kaspi.kz/shop/p/naushniki-jbl-tune-760nc-chernyi-102863031/?srsltid=AfmBOorg-L-rK0PRLfX8FepBOmEqECC04vqYp4vyw0cL9BdwP531junk'
+    link: 'https://kaspi.kz/shop/p/naushniki-jbl-tune-760nc-chernyi-102863031/',
+    isFavorite: false,
   },
   {
     id: 9, categoryId: 2, likes: 0,
@@ -135,7 +143,8 @@ export const PRODUCTS: Product[] = [
       'https://resources.cdn-kaspi.kz/img/m/p/h9f/h57/64155519025182.jpg?format=gallery-medium',
       'https://resources.cdn-kaspi.kz/img/m/p/h72/h0c/64155521777694.jpg?format=gallery-medium',
     ],
-    link: 'https://kaspi.kz/shop/p/naushniki-samsung-galaxy-buds-2-chernyi-102046373/?srsltid=AfmBOop-_F9SPXwJ-icG4gune25xAQ5Z_rwid9QNCd-TxYOc_T5LhZMv'
+    link: 'https://kaspi.kz/shop/p/naushniki-samsung-galaxy-buds-2-chernyi-102046373/',
+    isFavorite: false,
   },
   {
     id: 10, categoryId: 2, likes: 0,
@@ -149,7 +158,8 @@ export const PRODUCTS: Product[] = [
       'https://resources.cdn-kaspi.kz/img/m/p/hf4/h56/63770834960414.jpg?format=gallery-medium',
       'https://resources.cdn-kaspi.kz/img/m/p/h33/hb1/63770833649694.jpg?format=gallery-medium',
     ],
-    link: 'https://kaspi.kz/shop/p/naushniki-hyperx-cloud-ii-cherno-krasnyi-4800107/?srsltid=AfmBOoqnNnfOTN8OznFS1uRvYUVhdfyh4EwndMhtAJliEySs2UKRr57x'
+    link: 'https://kaspi.kz/shop/p/naushniki-hyperx-cloud-ii-cherno-krasnyi-4800107/',
+    isFavorite: false,
   },
 
   // Gaming (5)
@@ -165,7 +175,8 @@ export const PRODUCTS: Product[] = [
       'https://resources.cdn-kaspi.kz/img/m/p/p27/p2a/78474504.png?format=gallery-medium',
       'https://resources.cdn-kaspi.kz/img/m/p/p43/p2a/78474505.png?format=gallery-medium',
     ],
-    link: 'https://kaspi.kz/shop/p/sony-playstation-5-slim-114696098/?srsltid=AfmBOop3KTqJTH3gcJSnSejCYx8HLHQEkKdujcJvlVusGswMhK8S9J92'
+    link: 'https://kaspi.kz/shop/p/sony-playstation-5-slim-114696098/',
+    isFavorite: false,
   },
   {
     id: 12, categoryId: 3, likes: 0,
@@ -179,9 +190,14 @@ export const PRODUCTS: Product[] = [
       'https://api.technodom.kz/f3/api/v1/images/800/800/igrovaya_konsol_nintendo_switch_oled_white_45496453435_267280_1.jpg',
       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8LjVIBvTeuNg1uXU-5xH0TeLFOBAziiWpVA&s',
     ],
-    link: 'https://kaspi.kz/shop/p/nintendo-switch-oled-belyi-the-legend-of-zelda-breath-of-the-wild-110424017/?srsltid=AfmBOop5Xbf8LesxjIxCR6igN7M-7cAe30GVdBdxav-_ymWXMZ20wGfw'
+    link: 'https://kaspi.kz/shop/p/nintendo-switch-oled-belyi-the-legend-of-zelda-breath-of-the-wild-110424017/',
+    isFavorite: false,
   },
-  { id: 13, categoryId: 3, likes: 0, name: 'Xbox Series X', description: 'Мощная консоль для 4K гейминга.', price: 249990, rating: 4.7,
+  {
+    id: 13, categoryId: 3, likes: 0,
+    name: 'Xbox Series X',
+    description: 'Мощная консоль для 4K гейминга.',
+    price: 249990, rating: 4.7,
     image: 'https://resources.cdn-kaspi.kz/img/m/p/h26/ha1/63982141407262.jpg?format=gallery-medium',
     images: [
       'https://resources.cdn-kaspi.kz/img/m/p/hc8/h77/63982144585758.jpg?format=gallery-medium',
@@ -189,9 +205,14 @@ export const PRODUCTS: Product[] = [
       'https://resources.cdn-kaspi.kz/img/m/p/h35/hce/63982150615070.jpg?format=gallery-medium',
       'https://resources.cdn-kaspi.kz/img/m/p/hb9/h6a/63982152122398.jpg?format=gallery-medium',
     ],
-    link: 'https://kaspi.kz/shop/p/xbox-series-x-1tb-chernyi-100824897/?srsltid=AfmBOooMfakpKP03aXnGuYNKtsuc9XaY9urktBWfygVXL8fMNi4aTYEr'
+    link: 'https://kaspi.kz/shop/p/xbox-series-x-1tb-chernyi-100824897/',
+    isFavorite: false,
   },
-  { id: 14, categoryId: 3, likes: 0, name: 'Gaming Mouse', description: 'Точная мышь для игр.', price: 24990, rating: 4.5,
+  {
+    id: 14, categoryId: 3, likes: 0,
+    name: 'Gaming Mouse',
+    description: 'Точная мышь для игр.',
+    price: 24990, rating: 4.5,
     image: 'https://resources.cdn-kaspi.kz/img/m/p/p85/p8f/26937472.jpg?format=gallery-medium',
     images: [
       'https://resources.cdn-kaspi.kz/img/m/p/pa1/p8f/26937473.jpg?format=gallery-medium',
@@ -199,9 +220,14 @@ export const PRODUCTS: Product[] = [
       'https://resources.cdn-kaspi.kz/img/m/p/pf5/p8f/26937476.jpg?format=gallery-medium',
       'https://resources.cdn-kaspi.kz/img/m/p/p85/p8f/26937472.jpg?format=gallery-medium',
     ],
-    link: 'https://kaspi.kz/shop/p/ajazz-aj159-nl-belyi-135324500/?c=391010000&utm_source=google&utm_medium=cpc&utm_campaign=shop_google_search_computer_cmp_peripherals_desktop&gbraid=0AAAAAC7-v7hD_EiMXsz7Dsb3NQU0B47g3&gclid=CjwKCAiA2PrMBhA4EiwAwpHyC0cOy585ZhM_-AD9OclWrkdIxxR9ryKmS-zvKvOqi_oJku0_JzD4axoCHJoQAvD_BwE'
+    link: 'https://kaspi.kz/shop/p/ajazz-aj159-nl-belyi-135324500/',
+    isFavorite: false,
   },
-  { id: 15, categoryId: 3, likes: 0, name: 'Mechanical Keyboard', description: 'Клавиатура с приятным кликом.', price: 39990, rating: 4.4,
+  {
+    id: 15, categoryId: 3, likes: 0,
+    name: 'Mechanical Keyboard',
+    description: 'Клавиатура с приятным кликом.',
+    price: 39990, rating: 4.4,
     image: 'https://resources.cdn-kaspi.kz/img/m/p/p17/pb4/79746578.jpg?format=gallery-medium',
     images: [
       'https://resources.cdn-kaspi.kz/img/m/p/p8f/pb1/79746580.jpg?format=gallery-medium',
@@ -209,7 +235,8 @@ export const PRODUCTS: Product[] = [
       'https://resources.cdn-kaspi.kz/img/m/p/p09/pae/79746591.jpg?format=gallery-medium',
       'https://resources.cdn-kaspi.kz/img/m/p/ped/pad/79746592.jpg?format=gallery-medium',
     ],
-    link: 'https://kaspi.kz/shop/p/ultra-s-ultkb01-combo8-chernyi-150057534/?c=391010000&utm_source=google&utm_medium=cpc&utm_campaign=shop_google_search_computer_cmp_peripherals_desktop&gbraid=0AAAAAC7-v7hD_EiMXsz7Dsb3NQU0B47g3&gclid=CjwKCAiA2PrMBhA4EiwAwpHyC9WD2vk7V2BvCl0OLsTeIwGQZrdliCdYK-x49mmIOPBY7hrltFwc6hoC2csQAvD_BwE'
+    link: 'https://kaspi.kz/shop/p/ultra-s-ultkb01-combo8-chernyi-150057534/',
+    isFavorite: false,
   },
 
   // Tech & Gadgets (5)
@@ -225,7 +252,8 @@ export const PRODUCTS: Product[] = [
       'https://resources.cdn-kaspi.kz/img/m/p/hc1/h17/81547557699614.jpg?format=gallery-medium',
       'https://resources.cdn-kaspi.kz/img/m/p/hf6/h79/81547557568542.jpg?format=gallery-medium',
     ],
-    link: 'https://kaspi.kz/shop/p/apple-macbook-air-15-2023-15-3-8-gb-ssd-256-gb-macos-mqkp3ru-a-111217765/?srsltid=AfmBOoq7S9YByIw-hmxnUP1DF4u0EpRD3m-akMpgSzLVYuPXZxupwozq&utm_source=google&utm_medium=cpc&utm_campaign=shop_google_search_computer_cmp_peripherals_desktop&gbraid=0AAAAAC7-v7hD_EiMXsz7Dsb3NQU0B47g3&gclid=CjwKCAiA2PrMBhA4EiwAwpHyC9WD2vk7V2BvCl0OLsTeIwGQZrdliCdYK-x49mmIOPBY7hrltFwc6hoC2csQAvD_BwE'
+    link: 'https://kaspi.kz/shop/p/apple-macbook-air-15-2023-15-3-8-gb-ssd-256-gb-macos-mqkp3ru-a-111217765/',
+    isFavorite: false,
   },
   {
     id: 17, categoryId: 4, likes: 0,
@@ -239,7 +267,8 @@ export const PRODUCTS: Product[] = [
       'https://resources.cdn-kaspi.kz/img/m/p/pd2/pa1/18566187.png?format=gallery-medium',
       'https://resources.cdn-kaspi.kz/img/m/p/pef/pa1/18566188.png?format=gallery-medium',
     ],
-    link: 'https://kaspi.kz/shop/p/apple-ipad-10th-gen-2024-10-9-djuim-4-gb-64-gb-sinii-132992660/?srsltid=AfmBOoojS6UIzopp3RcRNz83vw8Hl6ZDLkKnHRnZCVfxKbETiyvkXWhx&utm_source=google&utm_medium=cpc&utm_campaign=shop_google_search_computer_cmp_peripherals_desktop&gbraid=0AAAAAC7-v7hD_EiMXsz7Dsb3NQU0B47g3&gclid=CjwKCAiA2PrMBhA4EiwAwpHyC9WD2vk7V2BvCl0OLsTeIwGQZrdliCdYK-x49mmIOPBY7hrltFwc6hoC2csQAvD_BwE'
+    link: 'https://kaspi.kz/shop/p/apple-ipad-10th-gen-2024-10-9-djuim-4-gb-64-gb-sinii-132992660/',
+    isFavorite: false,
   },
   {
     id: 18, categoryId: 4, likes: 0,
@@ -253,7 +282,8 @@ export const PRODUCTS: Product[] = [
       'https://resources.cdn-kaspi.kz/img/m/p/h09/h20/81397947367454.jpg?format=gallery-medium',
       'https://resources.cdn-kaspi.kz/img/m/p/h96/h82/85625410453534.jpg?format=gallery-medium',
     ],
-    link: 'https://kaspi.kz/shop/p/dyson-v15-detect-absolute-serebristyi-110975356/?srsltid=AfmBOormbgQe5DZ2IPuVE-HT3zW6ZQl9kXGsZL2M1SQvIGT1DC7hs-sx&utm_source=google&utm_medium=cpc&utm_campaign=shop_google_search_computer_cmp_peripherals_desktop&gbraid=0AAAAAC7-v7hD_EiMXsz7Dsb3NQU0B47g3&gclid=CjwKCAiA2PrMBhA4EiwAwpHyC9WD2vk7V2BvCl0OLsTeIwGQZrdliCdYK-x49mmIOPBY7hrltFwc6hoC2csQAvD_BwE'
+    link: 'https://kaspi.kz/shop/p/dyson-v15-detect-absolute-serebristyi-110975356/',
+    isFavorite: false,
   },
   {
     id: 19, categoryId: 4, likes: 0,
@@ -267,7 +297,8 @@ export const PRODUCTS: Product[] = [
       'https://resources.cdn-kaspi.kz/img/m/p/he8/h93/83701586001950.jpg?format=gallery-medium',
       'https://resources.cdn-kaspi.kz/img/m/p/he8/h93/83701586001950.jpg?format=gallery-medium',
     ],
-    link: 'https://kaspi.kz/shop/p/xiaomi-smart-band-8-global-version-chernyi-113260965/?srsltid=AfmBOop7VJggs7oSPqF4R1EWMZorsgvAMLhpEp0OoNdKFiOwgO8xjq1e&utm_source=google&utm_medium=cpc&utm_campaign=shop_google_search_computer_cmp_peripherals_desktop&gbraid=0AAAAAC7-v7hD_EiMXsz7Dsb3NQU0B47g3&gclid=CjwKCAiA2PrMBhA4EiwAwpHyC9WD2vk7V2BvCl0OLsTeIwGQZrdliCdYK-x49mmIOPBY7hrltFwc6hoC2csQAvD_BwE'
+    link: 'https://kaspi.kz/shop/p/xiaomi-smart-band-8-global-version-chernyi-113260965/',
+    isFavorite: false,
   },
   {
     id: 20, categoryId: 4, likes: 0,
@@ -281,6 +312,7 @@ export const PRODUCTS: Product[] = [
       'https://resources.cdn-kaspi.kz/img/m/p/h6b/hdc/84355202580510.jpg?format=gallery-medium',
       'https://resources.cdn-kaspi.kz/img/m/p/h7f/h74/84353783496734.jpg?format=gallery-medium',
     ],
-    link: 'https://kaspi.kz/shop/p/yunteko-gi20-47-mm-rozovyi-rozovyi-114087319/?c=391010000&utm_source=google&utm_medium=cpc&utm_campaign=shop_google_search_computer_cmp_peripherals_desktop&gbraid=0AAAAAC7-v7hD_EiMXsz7Dsb3NQU0B47g3&gclid=CjwKCAiA2PrMBhA4EiwAwpHyC9WD2vk7V2BvCl0OLsTeIwGQZrdliCdYK-x49mmIOPBY7hrltFwc6hoC2csQAvD_BwE'
+    link: 'https://kaspi.kz/shop/p/yunteko-gi20-47-mm-rozovyi-rozovyi-114087319/',
+    isFavorite: false,
   },
 ];

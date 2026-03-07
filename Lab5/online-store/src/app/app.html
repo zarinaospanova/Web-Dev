@@ -13,6 +13,7 @@
     </div>
   </header>
 
+  <!-- 1) Categories -->
   <section class="filters">
     <button class="chip" [class.active]="selectedCategoryId === null" (click)="selectCategory(null)">
       All Products
@@ -25,8 +26,32 @@
     }
   </section>
 
+  <!-- 2) ⭐ Favorites -->
+  <section class="favorites">
+    <div class="fav-title">⭐ Favorites ({{ favorites.length }})</div>
+
+    @if (favorites.length === 0) {
+      <div class="fav-empty">No favorite products yet</div>
+    } @else {
+      <div class="fav-grid">
+        @for (p of favorites; track p.id) {
+          <app-product-item
+            [product]="p"
+            (delete)="deleteProduct($event)"
+            (toggleFavorite)="toggleFavorite($event)">
+          </app-product-item>
+        }
+      </div>
+    }
+  </section>
+
+  <!-- 3) Products list -->
   <section class="content">
-    <app-product-list [products]="selectedProducts"></app-product-list>
+    <app-product-list
+      [products]="selectedProducts"
+      (delete)="deleteProduct($event)"
+      (toggleFavorite)="toggleFavorite($event)">
+    </app-product-list>
   </section>
 
   <footer class="footer">

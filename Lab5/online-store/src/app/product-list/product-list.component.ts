@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Product } from '../models/product.model';
@@ -14,6 +14,9 @@ import { ProductItemComponent } from '../product-item/product-item.component';
 export class ProductListComponent {
   @Input({ required: true }) products!: Product[];
 
+  @Output() delete = new EventEmitter<number>();          // ✅ NEW
+  @Output() toggleFavorite = new EventEmitter<number>();  // ✅ NEW
+
   searchQuery = '';
 
   get filteredProducts(): Product[] {
@@ -22,7 +25,6 @@ export class ProductListComponent {
     return this.products.filter(p => p.name.toLowerCase().includes(q));
   }
 
-  deleteProduct(id: number) {
-    this.products = this.products.filter(p => p.id !== id);
-  }
+  onDelete(id: number) { this.delete.emit(id); }                 // ✅ NEW
+  onToggleFavorite(id: number) { this.toggleFavorite.emit(id); } // ✅ NEW
 }

@@ -17,7 +17,8 @@
   @for (p of filteredProducts; track p.id) {
     <app-product-item
       [product]="p"
-      (delete)="deleteProduct($event)">
+      (delete)="onDelete($event)"
+      (toggleFavorite)="onToggleFavorite($event)">
     </app-product-item>
   }
 </div>

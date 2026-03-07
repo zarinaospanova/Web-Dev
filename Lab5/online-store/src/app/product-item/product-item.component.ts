@@ -11,16 +11,22 @@ import { Product } from '../models/product.model';
 })
 export class ProductItemComponent implements OnInit {
   @Input({ required: true }) product!: Product;
+
   @Output() delete = new EventEmitter<number>();
+  @Output() toggleFavorite = new EventEmitter<number>(); // ✅ NEW
 
   activeImage = '';
 
   ngOnInit() {
     this.activeImage = this.product.image;
-    // safety: if images empty, create 4 from main
+
     if (!this.product.images || this.product.images.length === 0) {
       this.product.images = [this.product.image, this.product.image, this.product.image, this.product.image];
     }
+  }
+
+  onToggleFavorite() { // ✅ NEW
+    this.toggleFavorite.emit(this.product.id);
   }
 
   setImage(img: string) {
@@ -50,7 +56,6 @@ export class ProductItemComponent implements OnInit {
     );
   }
 
-  // Kaspi-like stars
   stars(): number[] { return [1,2,3,4,5]; }
   isFull(star: number): boolean { return this.product.rating >= star; }
   isHalf(star: number): boolean { return this.product.rating >= star - 0.5 && this.product.rating < star; }

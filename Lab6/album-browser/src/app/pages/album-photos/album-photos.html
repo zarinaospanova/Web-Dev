@@ -1,0 +1,15 @@
+<h2>Photos</h2>
+
+<button (click)="back()">Back</button>
+
+<div class="grid">
+
+  <div *ngFor="let photo of photos">
+
+    <img [src]="photo.thumbnailUrl">
+
+    <p>{{photo.title}}</p>
+
+  </div>
+
+</div>

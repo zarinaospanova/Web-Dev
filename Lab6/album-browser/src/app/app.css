@@ -1,0 +1,25 @@
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px;
+  background:#2563eb;
+  color:white;
+}
+
+.menu a{
+  margin-left:20px;
+  color:white;
+  text-decoration:none;
+}
+
+.menu a.active{
+  background:white;
+  color:#2563eb;
+  padding:5px 10px;
+  border-radius:8px;
+}
+
+.container{
+  padding:20px;
+}
