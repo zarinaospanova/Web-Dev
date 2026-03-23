@@ -1,13 +1,23 @@
-.card{
-
-  padding:15px;
-
-  border:1px solid #ccc;
-
+.album-card{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:14px;
+  border:1px solid #eee;
   border-radius:10px;
-
   margin-bottom:10px;
+  background:#fafafa;
+}
 
+.album-info{
   cursor:pointer;
+}
 
+.delete-btn{
+  background:#ffe5e5;
+  border:none;
+  padding:6px 12px;
+  border-radius:8px;
+  cursor:pointer;
+  color:#b00000;
 }

@@ -5,19 +5,16 @@ import { About } from './pages/about/about';
 import { Albums } from './pages/albums/albums';
 import { AlbumDetail } from './pages/album-detail/album-detail';
 import { AlbumPhotos } from './pages/album-photos/album-photos';
+import { AlbumCreate } from './pages/album-create/album-create';
 
 export const routes: Routes = [
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
 
-  { path:'', redirectTo:'home', pathMatch:'full' },
+  { path: 'home', component: Home },
+  { path: 'about', component: About },
 
-  { path:'home', component:Home },
-
-  { path:'about', component:About },
-
-  { path:'albums', component:Albums },
-
-  { path:'albums/:id', component:AlbumDetail },
-
-  { path:'albums/:id/photos', component:AlbumPhotos }
-
+  { path: 'albums', component: Albums },
+  { path: 'albums/new', component: AlbumCreate },
+  { path: 'albums/:id', component: AlbumDetail },
+  { path: 'albums/:id/photos', component: AlbumPhotos }
 ];

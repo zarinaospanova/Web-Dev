@@ -1,0 +1,51 @@
+<section class="create-card">
+  <h2>Create New Album</h2>
+
+  <p class="subtitle">
+    Sends POST /albums (JSONPlaceholder simulates creation).
+  </p>
+
+  <div *ngIf="errorMessage" class="error-box">
+    {{ errorMessage }}
+  </div>
+
+  <div *ngIf="successMessage" class="success-box">
+    {{ successMessage }}
+  </div>
+
+  <label for="userId">User ID (1–10)</label>
+  <input
+    id="userId"
+    type="number"
+    [(ngModel)]="userId"
+    min="1"
+    max="10"
+  />
+
+  <label for="title">Title</label>
+  <input
+    id="title"
+    type="text"
+    [(ngModel)]="title"
+    placeholder="e.g. My new album"
+  />
+
+  <div class="buttons">
+    <button class="cancel" type="button" (click)="cancel()">
+      Cancel
+    </button>
+
+    <button
+      class="create"
+      type="button"
+      (click)="createAlbum()"
+      [disabled]="submitting"
+    >
+      {{ submitting ? 'Creating...' : 'Create' }}
+    </button>
+  </div>
+
+  <p class="hint">
+    After success you return to /albums, and the new album appears at the top.
+  </p>
+</section>
