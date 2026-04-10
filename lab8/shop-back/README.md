@@ -75,3 +75,43 @@ python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 python manage.py runserver
+
+
+
+# Lab 10: Building API Views
+
+## Project
+shop-back
+
+## App
+api
+
+## View Levels
+- Level 2: FBV
+- Level 3: CBV
+- Level 4: Mixins
+- Level 5: Generics
+
+## Active Implementation
+Level 5 — Generics
+
+## Endpoints
+- /api/products/
+- /api/products/<product_id>/
+- /api/categories/
+- /api/categories/<category_id>/
+- /api/categories/<category_id>/products/
+
+## Files
+- api/views/fbv.py
+- api/views/cbv.py
+- api/views/mixins.py
+- api/views/generics.py
+- api/views/__init__.py
+
+## Run
+```bash
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+python manage.py runserver
